@@ -35,7 +35,8 @@ class FilledPathPainter extends CustomPainter {
 
     for (var point in points) {
       canvas.drawRect(
-          Offset(point['x'], point['y']) & const Size(8, 8), squarePaint);
+          Offset(point['x'] + 0.0, point['y'] + 0.0) & const Size(8, 8),
+          squarePaint);
     }
   }
 }

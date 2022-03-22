@@ -86,10 +86,10 @@ class _MyHomePageState extends State<MyHomePage> {
           });
         });
 
-        if ((newX <= startPoints.dx.toInt() + 5 &&
-                newX >= startPoints.dx.toInt() - 5) &&
-            (newY <= startPoints.dy.toInt() + 5 &&
-                newY >= startPoints.dy.toInt() - 5)) {
+        if ((newX <= startPoints.dx.toInt() + 10 &&
+                newX >= startPoints.dx.toInt() - 10) &&
+            (newY <= startPoints.dy.toInt() + 10 &&
+                newY >= startPoints.dy.toInt() - 10)) {
           setState(() {
             startDrawing = false;
             points.add({
@@ -160,7 +160,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ...paths
                 .map(
                   (path) => CustomPaint(
-                    size: const Size.square(3600),
                     painter: FilledPathPainter(
                       path: path['path'],
                       points: points,
